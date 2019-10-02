@@ -1,25 +1,12 @@
 import React, {Component} from 'react';
-import {View, Text, SafeAreaView, StyleSheet} from 'react-native';
+import AppContainer from './navigation';
 
 class App extends Component {
   state = {Loading: true};
 
   render() {
-    return (
-      <SafeAreaView>
-        <View>
-          <Text style={styles.title}>Food Truck</Text>
-        </View>
-      </SafeAreaView>
-    );
+    return <AppContainer />;
   }
 }
-
-const styles = StyleSheet.create({
-  title: {
-    fontSize: 32,
-    textAlign: 'center',
-  },
-});
 
 export default App;
