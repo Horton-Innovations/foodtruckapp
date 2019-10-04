@@ -1,19 +1,11 @@
 import React from 'react';
-import {Platform, StatusBar, View, SafeAreaView, Text} from 'react-native';
-// import {Spinner} from 'native-base';
+import {Platform, View, SafeAreaView} from 'react-native';
 import Header from './Header';
 
 const Page = props => {
   const {title, loading, error, children, ...viewProps} = props;
   const showHeader = !!title;
 
-  //   if (loading) {
-  //     return (
-  //       <View style={styles.spinnerContainer}>
-  //         <Spinner style={styles.spinner} />
-  //       </View>
-  //     );
-  //   } else {
   return (
     <SafeAreaView style={styles.page}>
       <View style={styles.pageContent}>
@@ -29,12 +21,6 @@ const Page = props => {
 };
 
 const styles = {
-  //   spinnerContainer: {
-  //     display: 'flex',
-  //     alignItems: 'center',
-  //     justifyContent: 'center',
-  //     height: '100%',
-  //   },
   page: {
     flex: 1,
     backgroundColor: '#fff',

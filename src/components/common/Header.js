@@ -5,8 +5,6 @@ import {withNavigation} from 'react-navigation';
 
 const {width} = Dimensions.get('window');
 
-const iconPrefix = Platform.OS === 'ios' ? 'ios' : 'md';
-
 const BackButton = withNavigation(({navigation, onPressBack}) => {
   const onPress = () => {
     onPressBack && onPressBack();

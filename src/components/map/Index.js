@@ -4,7 +4,7 @@ import Page from '../common/Page';
 
 const MapScreen = () => {
   return (
-    <Page title="Map" leftComponent="back">
+    <Page title="Map">
       <Text>Map Screen</Text>
     </Page>
   );
