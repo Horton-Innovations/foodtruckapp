@@ -2,6 +2,7 @@ import React from 'react';
 import {Text, View, Image, StyleSheet} from 'react-native';
 import Page from '../common/Page';
 import Theme from '../../config/Theme';
+import Card from './Card';
 
 class ProfileScreen extends React.Component {
   render() {
@@ -14,6 +15,7 @@ class ProfileScreen extends React.Component {
             style={styles.noImageStyle}
           />
         </View>
+        <Card />
       </Page>
     );
   }
