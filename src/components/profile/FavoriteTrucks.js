@@ -1,12 +1,17 @@
 import React, {Component} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
+import Truck from '../common/Truck';
+import Data from './MockData';
 
 class FavoriteTruck extends Component {
   render() {
     return (
-      <View>
+      <View style={{alignItems: 'center'}}>
         <Text style={styles.title}> Favorite Trucks</Text>
-        <Text>Truck 1</Text>
+
+        {Data.Trucks.map(truck => {
+          return <Truck title={truck.title} description={truck.description} />;
+        })}
       </View>
     );
   }
@@ -14,8 +19,9 @@ class FavoriteTruck extends Component {
 const styles = StyleSheet.create({
   title: {
     textAlign: 'center',
-    fontSize: 24,
-    marginTop: '5%',
+    fontSize: 26,
+    fontWeight: 'bold',
+    marginVertical: '5%',
   },
 });
 

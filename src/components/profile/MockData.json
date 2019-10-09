@@ -1,10 +1,11 @@
 {
-  "Data": [
+  "Trucks": [
     {
       "latitude": 38.255579,
       "longitude": -85.753391,
       "title": "Johns truck",
-      "description": "Best Truck in town"
+      "description": "Best Truck in town",
+      "url": "../../assets/mock/Trucks/IcecreamTruck.jpg"
     },
     {
       "title": "Bob's taco truck",
