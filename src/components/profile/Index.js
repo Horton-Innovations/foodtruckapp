@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
   },
   titleStyle: {
     textAlign: 'center',
-    marginTop: '15%',
+    marginTop: '10%',
     marginBottom: 20,
     fontSize: 24,
   },

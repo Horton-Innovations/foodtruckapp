@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
-import AppContainer from './navigation';
+import TabNavigator from './navigation';
 
 class App extends Component {
   state = {Loading: true};
 
   render() {
-    return <AppContainer />;
+    return <TabNavigator />;
   }
 }
 

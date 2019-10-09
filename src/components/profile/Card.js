@@ -1,22 +1,15 @@
 import React, {Component} from 'react';
 import {ScrollView, Text, StyleSheet} from 'react-native';
+import FavoriteTruck from './FavoriteTrucks';
 
 class Card extends Component {
   render() {
     return (
       <ScrollView>
-        <Text style={styles.title}> Favorite Trucks</Text>
+        <FavoriteTruck />
       </ScrollView>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  title: {
-    textAlign: 'center',
-    fontSize: 24,
-    marginTop: '5%',
-  },
-});
 
 export default Card;
