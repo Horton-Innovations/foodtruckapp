@@ -7,7 +7,7 @@ import Card from './Card';
 class ProfileScreen extends React.Component {
   render() {
     return (
-      <Page title="Profile">
+      <Page title="Account">
         <View style={styles.topStyle}>
           <Text style={styles.titleStyle}>User Name</Text>
           <Image

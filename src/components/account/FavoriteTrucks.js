@@ -6,11 +6,18 @@ import Data from './MockData';
 class FavoriteTruck extends Component {
   render() {
     return (
-      <View style={{alignItems: 'center'}}>
+      <View style={{alignItems: 'flex-start'}}>
         <Text style={styles.title}> Favorite Trucks</Text>
 
         {Data.Trucks.map(truck => {
-          return <Truck title={truck.title} description={truck.description} />;
+          return (
+            <Truck
+              key={truck.id}
+              title={truck.title}
+              description={truck.description}
+              url={truck.url}
+            />
+          );
         })}
       </View>
     );
@@ -19,7 +26,7 @@ class FavoriteTruck extends Component {
 const styles = StyleSheet.create({
   title: {
     textAlign: 'center',
-    fontSize: 26,
+    fontSize: 22,
     fontWeight: 'bold',
     marginVertical: '5%',
   },
