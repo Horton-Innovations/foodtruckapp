@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {ScrollView, Text, StyleSheet} from 'react-native';
+import {ScrollView} from 'react-native';
 import FavoriteTruck from './FavoriteTrucks';
 
 class Card extends Component {
