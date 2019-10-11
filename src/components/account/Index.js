@@ -15,7 +15,7 @@ class ProfileScreen extends React.Component {
             style={styles.noImageStyle}
           />
         </View>
-        <Card />
+        <Card navigation={this.props.navigation} />
       </Page>
     );
   }

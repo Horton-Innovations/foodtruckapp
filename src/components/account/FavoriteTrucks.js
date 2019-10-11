@@ -5,6 +5,7 @@ import Data from './MockData';
 
 class FavoriteTruck extends Component {
   render() {
+    const {navigation} = this.props;
     return (
       <View style={styles.container}>
         <Text style={styles.title}> Favorite Trucks</Text>
@@ -15,6 +16,8 @@ class FavoriteTruck extends Component {
               title={truck.title}
               description={truck.description}
               url={truck.url}
+              data={truck}
+              navigation={navigation}
             />
           );
         })}

@@ -6,7 +6,7 @@ class Card extends Component {
   render() {
     return (
       <ScrollView>
-        <FavoriteTruck />
+        <FavoriteTruck navigation={this.props.navigation} />
       </ScrollView>
     );
   }
