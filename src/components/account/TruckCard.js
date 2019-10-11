@@ -1,15 +1,15 @@
 import React, {Component} from 'react';
-import {ScrollView} from 'react-native';
+import {ScrollView, View} from 'react-native';
 import FavoriteTruck from './FavoriteTrucks';
 
-class Card extends Component {
+class TruckCard extends Component {
   render() {
     return (
-      <ScrollView>
+      <View>
         <FavoriteTruck navigation={this.props.navigation} />
-      </ScrollView>
+      </View>
     );
   }
 }
 
-export default Card;
+export default TruckCard;
