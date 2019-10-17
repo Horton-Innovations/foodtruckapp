@@ -1,21 +1,24 @@
 import React from 'react';
-import {Text, View, Image, StyleSheet} from 'react-native';
+import {Text, View, ScrollView, Image, StyleSheet} from 'react-native';
 import Page from '../common/Page';
 import Theme from '../../config/Theme';
-import Card from './Card';
+import TruckCard from './TruckCard';
+import FavoriteTruck from './FavoriteTrucks';
 
 class ProfileScreen extends React.Component {
   render() {
     return (
       <Page title="Account">
-        <View style={styles.topStyle}>
-          <Text style={styles.titleStyle}>User Name</Text>
-          <Image
-            source={require('../../assets/NoImage.png')}
-            style={styles.noImageStyle}
-          />
-        </View>
-        <Card />
+        <ScrollView>
+          <View style={styles.topStyle}>
+            <Text style={styles.titleStyle}>User Name</Text>
+            <Image
+              source={require('../../assets/NoImage.png')}
+              style={styles.noImageStyle}
+            />
+          </View>
+          <FavoriteTruck navigation={this.props.navigation} />
+        </ScrollView>
       </Page>
     );
   }
@@ -23,7 +26,7 @@ class ProfileScreen extends React.Component {
 
 const styles = StyleSheet.create({
   topStyle: {
-    height: '50%',
+    height: 225,
     backgroundColor: Theme.colors.lightGray,
     alignItems: 'center',
   },

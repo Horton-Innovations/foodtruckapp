@@ -3,10 +3,11 @@ import {createBottomTabNavigator} from 'react-navigation-tabs';
 import HomeScreen from './components/home/Index';
 import AccountScreen from './components/account/Index';
 import MapScreen from './components/map/Index';
+import AccountStack from './components/account/navigation';
 
 const TabNavigator = createBottomTabNavigator({
   Home: HomeScreen,
-  Account: AccountScreen,
+  Account: AccountStack,
   Map: MapScreen,
 });
 
