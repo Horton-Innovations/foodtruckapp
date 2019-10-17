@@ -10,16 +10,18 @@ class FavoriteTruck extends Component {
       <View style={styles.container}>
         <Text style={styles.title}> Favorite Trucks</Text>
         {Data.Trucks.map(truck => {
-          return (
-            <TruckListItem
-              key={truck.id}
-              title={truck.title}
-              description={truck.description}
-              url={truck.url}
-              data={truck}
-              navigation={navigation}
-            />
-          );
+          if (truck.favTruck) {
+            return (
+              <TruckListItem
+                key={truck.id}
+                title={truck.title}
+                description={truck.description}
+                url={truck.url}
+                data={truck}
+                navigation={navigation}
+              />
+            );
+          }
         })}
       </View>
     );

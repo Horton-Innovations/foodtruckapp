@@ -2,6 +2,7 @@
   "Trucks": [
     {
       "id": 1,
+      "favTruck": true,
       "latlng": {
         "latitude": 38.255579,
         "longitude": -85.753391
@@ -12,6 +13,7 @@
     },
     {
       "id": 2,
+      "favTruck": false,
       "latlng": {
         "latitude": 38.257202,
         "longitude": -85.753955
@@ -22,6 +24,7 @@
     },
     {
       "id": 3,
+      "favTruck": true,
       "latlng": {
         "latitude": 38.257617,
         "longitude": -85.752929
@@ -32,6 +35,7 @@
     },
     {
       "id": 4,
+      "favTruck": true,
       "latlng": {
         "latitude": 38.256924,
         "longitude": -85.749743
@@ -42,6 +46,7 @@
     },
     {
       "id": 5,
+      "favTruck": false,
       "latlng": {
         "latitude": 38.257137,
         "longitude": -85.745694
