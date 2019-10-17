@@ -9,13 +9,15 @@ const MapScreen = () => {
       <View style={styles.container}>
         <Text>Map Screen</Text>
         <MapView
+          provider="google"
           style={styles.mapContainer}
           initialRegion={{
-            latitude: 37.78825,
-            longitude: -122.4324,
-            latitudeDelta: 0.0922,
-            longitudeDelta: 0.0421,
+            latitude: 38.25667,
+            longitude: -85.7514,
+            latitudeDelta: 0.006866,
+            longitudeDelta: 0.004757,
           }}
+          // animateToRegion
         />
       </View>
     </Page>
