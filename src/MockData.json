@@ -2,40 +2,55 @@
   "Trucks": [
     {
       "id": 1,
-      "latitude": 38.255579,
-      "longitude": -85.753391,
+      "favTruck": true,
+      "latlng": {
+        "latitude": 38.255579,
+        "longitude": -85.753391
+      },
       "title": "Johns truck",
       "description": "Best Truck in town",
       "url": "https://rh-vendoradmin.s3.amazonaws.com/trucks/original/18631/5a4fdd0f-88ec-4bce-835b-3b9b46204482.jpg"
     },
     {
       "id": 2,
-      "latitude": 38.257202,
-      "longitude": -85.753955,
+      "favTruck": false,
+      "latlng": {
+        "latitude": 38.257202,
+        "longitude": -85.753955
+      },
       "title": "Bob's taco truck",
       "description": "Best Taco's for all",
       "url": "https://rh-vendoradmin.s3.amazonaws.com/trucks/original/17953/59b9bdf4-8cd0-4b2d-ac25-1a0246204482.jpg"
     },
     {
       "id": 3,
-      "latitude": 38.257617,
-      "longitude": -85.752929,
+      "favTruck": true,
+      "latlng": {
+        "latitude": 38.257617,
+        "longitude": -85.752929
+      },
       "title": "Bill's Dogs",
       "description": "Best Hot Dogs.",
       "url": "https://rh-vendoradmin.s3.amazonaws.com/trucks/original/19089/5a9ef8aa-3230-41e9-a374-319346204482.jpg"
     },
     {
       "id": 4,
-      "latitude": 38.256924,
-      "longitude": -85.749743,
+      "favTruck": true,
+      "latlng": {
+        "latitude": 38.256924,
+        "longitude": -85.749743
+      },
       "title": "Hamburger Heaven",
       "description": "Best Burger's for all",
       "url": "https://rh-vendoradmin.s3.amazonaws.com/trucks/original/9606/5538314c-29f4-4ef8-b65d-1e9346204482.jpg"
     },
     {
       "id": 5,
-      "latitude": 38.257137,
-      "longitude": -85.745694,
+      "favTruck": false,
+      "latlng": {
+        "latitude": 38.257137,
+        "longitude": -85.745694
+      },
       "title": "Good Ole Food",
       "description": "Good Ole food for all",
       "url": "https://rh-vendoradmin.s3.amazonaws.com/trucks/original/1907/4e697835-829c-459b-8ad8-683446204482.jpg"
