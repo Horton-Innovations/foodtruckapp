@@ -11,6 +11,8 @@
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
 #import <GoogleMaps/GoogleMaps.h>
+#import "RNSplashScreen.h"  // here
+
 
 @implementation AppDelegate
 
@@ -29,6 +31,8 @@
   rootViewController.view = rootView;
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
+  
+  [RNSplashScreen showSplash:@"LaunchScreen" inRootView:rootView];
   return YES;
 }
 
