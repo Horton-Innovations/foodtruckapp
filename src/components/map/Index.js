@@ -5,11 +5,11 @@ import MapView, {Marker} from 'react-native-maps';
 import Data from '../../MockData';
 
 const MapScreen = () => {
-  // const marker = {
-  //   latlng: {latitude: 38.25667, longitude: -85.7514},
-  //   title: 'My Truck',
-  //   description: 'This is a description',
-  // };
+  const marker = {
+    latlng: {latitude: 38.25667, longitude: -85.7514},
+    title: 'My Truck',
+    description: 'This is a description',
+  };
   const markers = Data.Trucks.map(truck => {
     return (
       <Marker
@@ -24,22 +24,21 @@ const MapScreen = () => {
   return (
     <Page title="Map">
       <View style={styles.container}>
-        <Text>Map Screen</Text>
         <MapView
           provider="google"
           style={styles.mapContainer}
           initialRegion={{
             latitude: 38.25667,
             longitude: -85.7514,
-            latitudeDelta: 0.006866,
-            longitudeDelta: 0.004757,
+            latitudeDelta: 0.01,
+            longitudeDelta: 0.01,
           }}
           loadingEnabled={true}>
-          {/* <Marker
+          <Marker
             coordinate={marker.latlng}
             title={marker.title}
             description={marker.description}
-          /> */}
+          />
           {markers}
         </MapView>
       </View>
