@@ -4,6 +4,7 @@ import Page from '../common/Page';
 import Theme from '../../config/Theme';
 import TruckCard from './TruckCard';
 import FavoriteTruck from './FavoriteTrucks';
+import Data from '../../MockData';
 
 class ProfileScreen extends React.Component {
   render() {
@@ -17,7 +18,7 @@ class ProfileScreen extends React.Component {
               style={styles.noImageStyle}
             />
           </View>
-          <FavoriteTruck navigation={this.props.navigation} />
+          <FavoriteTruck navigation={this.props.navigation} data={Data} />
         </ScrollView>
       </Page>
     );

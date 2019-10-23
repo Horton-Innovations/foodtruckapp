@@ -1,15 +1,15 @@
 import React, {Component} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import TruckListItem from '../common/TruckListItem';
-import Data from '../../MockData';
+// import Data from '../../MockData';
 
 class FavoriteTruck extends Component {
   render() {
-    const {navigation} = this.props;
+    const {navigation, data} = this.props;
     return (
       <View style={styles.container}>
         <Text style={styles.title}> Favorite Trucks</Text>
-        {Data.Trucks.map(truck => {
+        {data.Trucks.map(truck => {
           if (truck.favTruck) {
             return (
               <TruckListItem
