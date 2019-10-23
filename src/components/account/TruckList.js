@@ -6,21 +6,23 @@ import TruckListItem from '../common/TruckListItem';
 class TruckList extends Component {
   render() {
     const {navigation, data} = this.props;
+
+    const listOfTrucks = data.map(truck => {
+      return (
+        <TruckListItem
+          key={truck.id}
+          title={truck.title}
+          description={truck.description}
+          url={truck.url}
+          data={truck}
+          navigation={navigation}
+        />
+      );
+    });
     return (
       <View style={styles.container}>
         <Text style={styles.title}> Favorite Trucks</Text>
-        {data.map(truck => {
-          return (
-            <TruckListItem
-              key={truck.id}
-              title={truck.title}
-              description={truck.description}
-              url={truck.url}
-              data={truck}
-              navigation={navigation}
-            />
-          );
-        })}
+        {listOfTrucks}
       </View>
     );
   }

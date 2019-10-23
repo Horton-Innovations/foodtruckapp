@@ -15,15 +15,15 @@ class TruckListItem extends Component {
     };
     const source = (this.props.url && {uri: this.props.url}) || noTruckImage;
     return (
-        <TouchableOpacity onPress={onTruckItemPress}>
-          <View style={styles.truckContainer}>
-            <Image source={source} style={styles.imageStyle} />
-            <View style={styles.textContainer}>
-              <Text style={styles.title}>{this.props.title}</Text>
-              <Text>{this.props.description}</Text>
-            </View>
+      <TouchableOpacity onPress={onTruckItemPress}>
+        <View style={styles.truckContainer}>
+          <Image source={source} style={styles.imageStyle} />
+          <View style={styles.textContainer}>
+            <Text style={styles.title}>{this.props.title}</Text>
+            <Text>{this.props.description}</Text>
           </View>
-        </TouchableOpacity>
+        </View>
+      </TouchableOpacity>
     );
   }
 }
