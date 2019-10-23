@@ -3,11 +3,15 @@ import {Text, View, ScrollView, Image, StyleSheet} from 'react-native';
 import Page from '../common/Page';
 import Theme from '../../config/Theme';
 import TruckCard from './TruckCard';
-import FavoriteTruck from './FavoriteTrucks';
+import TruckList from './TruckList';
 import Data from '../../MockData';
+
+const favTrucks = Data.Trucks.filter(truck => truck.favTruck === true);
 
 class ProfileScreen extends React.Component {
   render() {
+    console.log('Data', Data);
+    console.log('favTrucks', favTrucks);
     return (
       <Page title="Account">
         <ScrollView>
@@ -18,7 +22,7 @@ class ProfileScreen extends React.Component {
               style={styles.noImageStyle}
             />
           </View>
-          <FavoriteTruck navigation={this.props.navigation} data={Data} />
+          <TruckList navigation={this.props.navigation} data={favTrucks} />
         </ScrollView>
       </Page>
     );

@@ -1,27 +1,25 @@
 import React, {Component} from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, ScrollView} from 'react-native';
 import TruckListItem from '../common/TruckListItem';
 // import Data from '../../MockData';
 
-class FavoriteTruck extends Component {
+class TruckList extends Component {
   render() {
     const {navigation, data} = this.props;
     return (
       <View style={styles.container}>
         <Text style={styles.title}> Favorite Trucks</Text>
-        {data.Trucks.map(truck => {
-          if (truck.favTruck) {
-            return (
-              <TruckListItem
-                key={truck.id}
-                title={truck.title}
-                description={truck.description}
-                url={truck.url}
-                data={truck}
-                navigation={navigation}
-              />
-            );
-          }
+        {data.map(truck => {
+          return (
+            <TruckListItem
+              key={truck.id}
+              title={truck.title}
+              description={truck.description}
+              url={truck.url}
+              data={truck}
+              navigation={navigation}
+            />
+          );
         })}
       </View>
     );
@@ -39,4 +37,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default FavoriteTruck;
+export default TruckList;
