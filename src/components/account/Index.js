@@ -6,7 +6,11 @@ import TruckCard from './TruckCard';
 import TruckList from './TruckList';
 import Data from '../../MockData';
 
+const noImage = require('../../assets/NoImage.png');
+
 const favTrucks = Data.Trucks.filter(truck => truck.favTruck === true);
+const user = Data.Users[0];
+const userAvatar = (user && {uri: user.url}) || noImage;
 
 class ProfileScreen extends React.Component {
   render() {
@@ -16,13 +20,14 @@ class ProfileScreen extends React.Component {
       <Page title="Account">
         <ScrollView>
           <View style={styles.topStyle}>
-            <Text style={styles.titleStyle}>User Name</Text>
-            <Image
-              source={require('../../assets/NoImage.png')}
-              style={styles.noImageStyle}
-            />
+            <Text style={styles.titleStyle}>{user.name}</Text>
+            <Image source={userAvatar} style={styles.noImageStyle} />
           </View>
-          <TruckList navigation={this.props.navigation} data={favTrucks} />
+          <TruckList
+            title={'Favorite Trucks'}
+            navigation={this.props.navigation}
+            data={favTrucks}
+          />
         </ScrollView>
       </Page>
     );
@@ -32,7 +37,7 @@ class ProfileScreen extends React.Component {
 const styles = StyleSheet.create({
   topStyle: {
     height: 225,
-    backgroundColor: Theme.colors.lightGray,
+    backgroundColor: Theme.colors.darkBlue,
     alignItems: 'center',
   },
   titleStyle: {

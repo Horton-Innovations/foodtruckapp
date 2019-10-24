@@ -21,7 +21,7 @@ class TruckList extends Component {
     });
     return (
       <View style={styles.container}>
-        <Text style={styles.title}> Favorite Trucks</Text>
+        <Text style={styles.title}>{this.props.title}</Text>
         {listOfTrucks}
       </View>
     );
@@ -30,6 +30,7 @@ class TruckList extends Component {
 const styles = StyleSheet.create({
   container: {
     alignItems: 'flex-start',
+    margin: 10,
   },
   title: {
     textAlign: 'center',

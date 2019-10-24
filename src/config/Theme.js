@@ -7,6 +7,7 @@ const lightGray = '#a8a8a8';
 const lightTurq = '#00e7b3';
 const offBlack = '#111111';
 const lightBlue = '#5ea4ff';
+const darkBlue = '#4F6D7A';
 
 export default {
   dimensions: {
@@ -19,5 +20,6 @@ export default {
     lightTurq: lightTurq,
     offBlack: offBlack,
     lightBlue: lightBlue,
+    darkBlue: darkBlue,
   },
 };
