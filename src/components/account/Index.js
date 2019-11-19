@@ -5,29 +5,38 @@ import Theme from '../../config/Theme';
 import TruckCard from './TruckCard';
 import TruckList from './TruckList';
 import Data from '../../MockData';
+import VendorTruckInfo from '../common/VendorTruckInfo';
 
 const noImage = require('../../assets/NoImage.png');
 
 const favTrucks = Data.Trucks.filter(truck => truck.favTruck === true);
-const user = Data.Users[0];
+const user = Data.Users[1];
+const isVendor = user.vender;
 const userAvatar = (user && {uri: user.url}) || noImage;
 
 class ProfileScreen extends React.Component {
   render() {
     console.log('Data', Data);
     console.log('favTrucks', favTrucks);
+    console.log('isVendor', isVendor);
     return (
       <Page title="Account">
         <ScrollView>
-          <View style={styles.topStyle}>
-            <Text style={styles.titleStyle}>{user.name}</Text>
-            <Image source={userAvatar} style={styles.noImageStyle} />
-          </View>
-          <TruckList
-            title={'Favorite Trucks'}
-            navigation={this.props.navigation}
-            data={favTrucks}
-          />
+          {isVendor ? (
+            <VendorTruckInfo />
+          ) : (
+            <View>
+              <View style={styles.topStyle}>
+                <Text style={styles.titleStyle}>{user.name}</Text>
+                <Image source={userAvatar} style={styles.noImageStyle} />
+              </View>
+              <TruckList
+                title={'Favorite Trucks'}
+                navigation={this.props.navigation}
+                data={favTrucks}
+              />
+            </View>
+          )}
         </ScrollView>
       </Page>
     );

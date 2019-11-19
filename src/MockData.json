@@ -87,6 +87,7 @@
       "id": 101,
       "name": "Kelly",
       "title": "I love food a lot",
+      "url": "https://media.newyorker.com/photos/5c3cda84f92c694343cc6fca/master/w_1023,c_limit/FestTranscript-Janet-Mock.jpg",
       "favTrucks": [5],
       "vender": true,
       "truckOwned": 5
