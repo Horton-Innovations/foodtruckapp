@@ -10,7 +10,7 @@ import VendorTruckInfo from '../common/VendorTruckInfo';
 const noImage = require('../../assets/NoImage.png');
 
 const favTrucks = Data.Trucks.filter(truck => truck.favTruck === true);
-const user = Data.Users[1];
+const user = Data.Users[0];
 const isVendor = user.vender;
 const userAvatar = (user && {uri: user.url}) || noImage;
 
